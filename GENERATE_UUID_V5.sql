@@ -32,6 +32,8 @@ CREATE FUNCTION dataset.GENERATE_UUID_V5(reference_var STRING) RETURNS STRING AS
             )
         FROM generated_uuid
     )
+) OPTIONS (
+    description = 'Generate a deterministic UUID using UUID ver. 5 specifications. See here for more info: https://www.uuidtools.com/uuid-versions-explained#version-3-version-5'
 );
 
 SELECT 
